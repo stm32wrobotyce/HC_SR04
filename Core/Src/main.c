@@ -89,23 +89,15 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_TIM1_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  hc_sr04_init(&distance_sensor, &htim1);
-
-  uint32_t time_tick_ms = HAL_GetTick();
-  uint32_t max_time_ms = 100;
+  hc_sr04_init(&distance_sensor, &htim1, &htim2, TIM_CHANNEL_3);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if((HAL_GetTick() - time_tick_ms) > max_time_ms)
-	  {
-		  time_tick_ms = HAL_GetTick();
-
-		  hc_sr04_set_trigger(&distance_sensor);
-	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -1,4 +1,2 @@
-hc_sr04.c:12:6:hc_sr04_init	16	static
-hc_sr04.c:19:6:hc_sr04_set_trigger	16	static
-hc_sr04.c:26:10:hc_sr04_convert_us_to_cm	16	static
-hc_sr04.c:31:6:hc_sr_04_wait_us	24	static
+hc_sr04.c:12:6:hc_sr04_init	24	static
+hc_sr04.c:22:10:hc_sr04_convert_us_to_cm	16	static
